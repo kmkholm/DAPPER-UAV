@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+data/raw/
+data/cache/
+results/models/
+emulation/gns3vm_ip.txt
+emulation/project_ids.json
+emulation/ctx.tar

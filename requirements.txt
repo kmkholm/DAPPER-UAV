@@ -1,0 +1,11 @@
+torch>=2.3
+numpy>=1.26
+pandas>=2.0
+scikit-learn>=1.4
+matplotlib>=3.8
+dpkt>=1.9
+requests>=2.31
+paramiko>=3.4
+cryptography>=42
+playwright>=1.40
+pymavlink==2.4.49
