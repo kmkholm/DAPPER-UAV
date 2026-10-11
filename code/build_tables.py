@@ -217,27 +217,82 @@ def build_op4_table():
     open(os.path.join(PAPER, "auto_table_op4.tex"), "w").write(t)
 
 
+def build_public_table():
+    """DAPPER on the public PiNcH over-the-air captures (results/public, single observer -> local training)."""
+    PUB = os.path.join(HERE, "..", "results", "public")
+    rows, macros = [], ""
+    for net, lab, chance in (("P", "Steady vs.\\ moving (\\SI{12.8}{s} windows)", "0.50"),
+                             ("Q", "Seven stick movements (\\SI{6.4}{s})", "0.14")):
+        v = []
+        for s in (1, 2, 3):
+            p = os.path.join(PUB, "%s_local_s%d.json" % (net, s))
+            if os.path.exists(p):
+                v.append(json.load(open(p))["overall"])
+        if v:
+            f1 = np.array([x["macro_f1"] for x in v]); acc = np.array([x["acc"] for x in v])
+            n = sum(d["n"] for d in json.load(open(os.path.join(PUB, "%s_local_s1.json" % net)))["per_site"].values())
+            rows.append("%s & %s & %d & $%.3f \\pm %.3f$ & $%.1f$ \\\\" % (lab, chance, n, f1.mean(), f1.std(), 100 * acc.mean()))
+            macros += macro("Pub" + net, "%.3f" % f1.mean()) + macro("PubAcc" + net, "%.1f" % (100 * acc.mean())) + macro("PubN" + net, str(n))
+        else:
+            rows.append("%s & %s & -- & -- & -- \\\\" % (lab, chance)); macros += macro("Pub" + net, "--") + macro("PubAcc" + net, "--") + macro("PubN" + net, "--")
+    t = ("\\begin{table}[!htb]\n\\centering\n\\caption{{\\bf DAPPER on the public PiNcH over-the-air captures}~\\cite{pinch2020}: a 3DR Solo "
+         "multirotor running ArduCopter, encrypted Wi-Fi between drone and remote controller, passively captured. Held-out time blocks, macro-F1 and "
+         "accuracy as mean $\\pm$ s.d. over three seeds, single observer.}\n\\label{tab:public}\n\\footnotesize\n\\setlength{\\tabcolsep}{4pt}\n\\begin{tabular}{lcccc}\n\\toprule\n"
+         "Task & Chance & Windows & Macro-F1 & Acc.\\ (\\%) \\\\\n\\midrule\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n\\end{table}\n")
+    open(os.path.join(PAPER, "auto_table_public.tex"), "w").write(t)
+    with open(os.path.join(PAPER, "auto_macros.tex"), "a") as f:
+        f.write(macros)
+
+
+def _window_counts(proc, net, T=128):
+    import sys
+    sys.path.insert(0, HERE)
+    from data import load_network
+    X, clients, _ = load_network(proc, net, T=T)
+    sp = np.concatenate([d["split"] for d in clients.values()]); y = np.concatenate([d["y"] for d in clients.values()])
+    nc = int(y.max()) + 1
+    return [int((sp == k).sum()) for k in range(3)], [np.bincount(y[sp == k], minlength=nc) for k in range(3)], len(clients)
+
+
 def build_data_table():
-    counts = {}
-    for f in sorted(glob.glob(os.path.join(PROC, "*.npz"))):
-        if f.endswith("_pk.npz"):
-            continue
-        z = np.load(f, allow_pickle=True)
-        net = str(z["net"]); y = np.asarray(z["y"]); y = y[y >= 0]
-        counts.setdefault(net, np.zeros(7, int))
-        c = np.bincount(y, minlength=7)
-        counts[net] += c
-    t = ("\\begin{table}[!htb]\n\\centering\n\\caption{{\\bf Labelled bins per flight phase} (\\SI{100}{ms} bins, "
-         "whole corpus). Windows are formed from these bins as described in the text.}\n\\label{tab:data}\n"
-         "\\begin{tabular}{llr}\n\\toprule\nFleet & Phase & Bins \\\\\n\\midrule\n")
-    if "A" in counts:
-        for i, c in enumerate(COPTER):
-            t += "%s & %s & %s \\\\\n" % ("Multirotor" if i == 0 else "", c, f"{int(counts['A'][i]):,}")
-    if "B" in counts:
-        for i, c in enumerate(PLANE):
-            t += "%s & %s & %s \\\\\n" % ("VTOL" if i == 0 else "", c, f"{int(counts['B'][i]):,}")
-    t += "\\bottomrule\n\\end{tabular}\n\\end{table}\n"
+    """tab:data = the datasets and their splits; tab:phasesplit = windows per fine phase and split."""
+    summ = json.load(open(os.path.join(PROC, "summary.json")))
+    rows, phase = [], {}
+    for net, name, src, cls in (("A", "SkyNet-A, multirotor (this work)", "GNS3, ArduCopter SITL, MAVLink~2 / WireGuard", COPTER),
+                                ("B", "SkyNet-B, VTOL (this work)", "GNS3, ArduPlane SITL, MAVLink~2 / IPsec", PLANE)):
+        r = [d for d in summ if d["net"] == net]
+        n, per, nsites = _window_counts(PROC, net); phase[net] = (cls, per)
+        rows.append("%s & %s & %d / %d & %.1f & %s & %s & %s & %s & %d \\\\" % (
+            name, src, len(r), nsites, sum(d["hours"] for d in r), f"{sum(d['packets'] for d in r):,}",
+            f"{n[0]:,}", f"{n[1]:,}", f"{n[2]:,}", len(cls)))
+    pub = os.path.join(HERE, "..", "data", "public_pinch", "proc")
+    if os.path.exists(pub):
+        for net, name, T, ncls, frames, hrs in (("P", "PiNcH, steady / moving (public)", 128, 2, 174679, 1202 / 3600),
+                                                ("Q", "PiNcH, stick movements (public)", 64, 7, 66317, 430 / 3600)):
+            n, _, _ = _window_counts(pub, net, T=T)
+            rows.append("%s & %s & 1 / 1 & %.2f & %s & %s & %s & %s & %d \\\\" % (
+                name, "real 3DR Solo, ArduCopter, encrypted Wi-Fi~\\cite{pinch2020}", hrs, f"{frames:,}", f"{n[0]:,}", f"{n[1]:,}", f"{n[2]:,}", ncls))
+    t = ("\\begin{table}[!htb]\n\\centering\n\\small\n"
+         "\\caption{{\\bf Datasets.} Source, number of drones and observation sites, captured duration, captured encrypted packets (frames for the "
+         "public captures), windows in the training / validation / test splits, and number of fine classes. Splits are by sortie "
+         "(emulated fleets) or by time block (public captures), so no flight or time block appears in two splits.}\n\\label{tab:data}\n"
+         "\\resizebox{\\linewidth}{!}{\\begin{tabular}{p{3.0cm}p{3.6cm}cccrrrc}\n\\toprule\n"
+         "Dataset & Source & Drones / sites & Hours & Packets & Train & Val. & Test & Classes \\\\\n\\midrule\n" + "\n".join(rows)
+         + "\n\\bottomrule\n\\end{tabular}}\n\\end{table}\n")
     open(os.path.join(PAPER, "auto_table_data.tex"), "w").write(t)
+    # windows per fine phase and split
+    lines = []
+    for net, fleet in (("A", "Multirotor"), ("B", "VTOL")):
+        cls, per = phase[net]
+        for i, c in enumerate(cls):
+            lines.append("%s & %s & %s & %s & %s \\\\" % (fleet if i == 0 else "", c, f"{int(per[0][i]):,}", f"{int(per[1][i]):,}", f"{int(per[2][i]):,}"))
+        if net == "A":
+            lines.append("\\midrule")
+    t = ("\\begin{table}[!htb]\n\\centering\n\\caption{{\\bf Windows per fine flight phase and split} in the two emulated fleets "
+         "(\\SI{12.8}{s} windows, \\SI{2}{s} stride, majority phase covering at least \\PurityPct{} of the window).}\n\\label{tab:phasesplit}\n"
+         "\\begin{tabular}{llrrr}\n\\toprule\nFleet & Phase & Train & Validation & Test \\\\\n\\midrule\n" + "\n".join(lines)
+         + "\n\\bottomrule\n\\end{tabular}\n\\end{table}\n")
+    open(os.path.join(PAPER, "auto_table_phasesplit.tex"), "w").write(t)
 
 
 if __name__ == "__main__":
@@ -247,5 +302,5 @@ if __name__ == "__main__":
     txt = open(os.path.join(PAPER, "auto_macros.tex")).read()
     txt = txt.replace("\\newcommand{\\TotalWindows}{--}", "\\newcommand{\\TotalWindows}{%s}" % (f"{tw:,}" if tw else "--"))
     open(os.path.join(PAPER, "auto_macros.tex"), "w").write(txt)
-    build_main_table(); build_ablation_table(); build_defense_table(); build_data_table(); build_fine_table(); build_op4_table()
+    build_main_table(); build_ablation_table(); build_defense_table(); build_data_table(); build_fine_table(); build_op4_table(); build_public_table()
     print("wrote auto_macros.tex and auto_table_*.tex")

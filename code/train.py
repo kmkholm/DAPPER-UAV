@@ -55,7 +55,8 @@ TASK_MAP = {"op4": {"A": [0, 2, 1, 2, 1, 3, 2], "B": [0, 2, 2, 2, 1, 3]}, "op3":
 TASK_CLASSES = {"op4": ["Ground", "Stationary", "Transit", "Tele-operation"], "op3": ["Ground", "Autonomous flight", "Tele-operation"]}
 TASK_TAG = {"fine": "", "op4": "c", "op3": "t"}
 COARSE_MAP = np.array(TASK_MAP[A.task][A.net]) if A.coarse else None
-CLASSES = TASK_CLASSES[A.task] if A.coarse else (COPTER_CLASSES if A.net == "A" else PLANE_CLASSES)
+PUBLIC_CLASSES = {"P": ["Steady", "Moving"], "Q": ["Pitch down", "Pitch up", "Roll left", "Roll right", "Throttle up", "Yaw left", "Yaw right"]}
+CLASSES = TASK_CLASSES[A.task] if A.coarse else PUBLIC_CLASSES.get(A.net, COPTER_CLASSES if A.net == "A" else PLANE_CLASSES)
 NC = len(CLASSES)
 X, clients, VIEWS = load_network(A.proc, A.net, T=A.T, transform=DEFENSES.get(A.defense), label_map=COARSE_MAP if A.coarse else None)
 TAG = A.net + TASK_TAG[A.task]
