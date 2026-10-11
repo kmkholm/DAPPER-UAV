@@ -1,0 +1,48 @@
+{
+ "net": "P",
+ "task": "fine",
+ "method": "local",
+ "seed": 1,
+ "holdout": "",
+ "classes": [
+  "Steady",
+  "Moving"
+ ],
+ "rounds": 20,
+ "steps": 50,
+ "T": 128,
+ "n_feat": 90,
+ "train_sites": [
+  "P1"
+ ],
+ "overall": {
+  "macro_f1": 0.9572727272727273,
+  "bacc": 0.9565217391304348,
+  "acc": 0.9574468085106383,
+  "site_mean_f1": 0.9572727272727273,
+  "train_f1": 1.0
+ },
+ "per_site": {
+  "P1": {
+   "f1": 0.9572727272727273,
+   "bacc": 0.9565217391304348,
+   "acc": 0.9574468085106383,
+   "n": 47
+  }
+ },
+ "confusion": [
+  [
+   24,
+   0
+  ],
+  [
+   2,
+   21
+  ]
+ ],
+ "history": [],
+ "onboard": {},
+ "defense": "none",
+ "overhead": 0.0,
+ "minutes": 0.52
+}

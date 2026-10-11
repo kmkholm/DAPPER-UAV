@@ -20,6 +20,16 @@ The repository contains everything needed to regenerate the dataset in GNS3, to 
 
 Phase codes: multirotor `0 ground, 1 ascent, 2 hover, 3 cruise, 4 orbit, 5 tele-operation, 6 descent`; VTOL `0 ground, 1 VTOL climb, 2 VTOL descent, 3 cruise, 4 loiter, 5 tele-operation`; `-1` = no ground truth.
 
+## Public over-the-air captures
+
+`code/public_pinch.py` converts the public PiNcH dataset (Sciancalepore et al., Computer Networks 2020; download `data.zip` from https://cri-lab.net/pinch into `data/public_pinch/release`) into the same per-drone files, and `results/public/` holds the runs reported in the paper:
+
+```bash
+python code/public_pinch.py data/public_pinch/release data/public_pinch/proc
+python code/train.py --net P --method local --task fine --seed 1 --rounds 20 --steps 50 --proc data/public_pinch/proc --out results/public
+python code/train.py --net Q --method local --task fine --seed 1 --rounds 20 --steps 50 --T 64 --proc data/public_pinch/proc --out results/public
+```
+
 ## Reproducing the results
 
 ```bash
