@@ -1,0 +1,13 @@
+{
+  "title": "DAPPER-UAV testbed, dataset and code",
+  "upload_type": "software",
+  "description": "GNS3 emulation testbed (ArduPilot 4.7.1 SITL, MAVLink 2 over WireGuard and IPsec, emulated 5G/LTE/satellite cell sites), processed encrypted C2 traffic of 24 drones with per-bin flight-state labels, the DAPPER federated observer, traffic-shaping defences, sortie-grouped cross-validation, companion-traffic controls, delay analysis and result files.",
+  "creators": [
+    {"name": "Tawfik, Mohammed", "affiliation": "Ajloun National University", "orcid": "0000-0002-1227-387X"},
+    {"name": "Al-walidi, Nejood Hashim", "affiliation": "Sana'a University"},
+    {"name": "Fathi, Islam S.", "affiliation": "Ajloun National University"},
+    {"name": "Aly, Mohammed", "affiliation": "Egyptian Russian University"}
+  ],
+  "license": "MIT",
+  "keywords": ["UAV security", "encrypted traffic analysis", "MAVLink", "federated learning", "GNS3", "traffic shaping"]
+}
