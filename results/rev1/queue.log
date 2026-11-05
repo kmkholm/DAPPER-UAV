@@ -1,0 +1,666 @@
+revision grid: 96 runs -> D:\Drive D\Ajloun Papers\DAPPER-UAV 2026\results\rev1\runs
+[1/96] cv-dapper  At_dapper_s1_cv50
+round  5  val macroF1 0.9061
+round 10  val macroF1 0.9053
+round 15  val macroF1 0.9021
+round 20  val macroF1 0.9023
+SAVED At_dapper_s1_cv50 macroF1 0.9981  bacc 0.9979  trainF1 0.9162 (7.1 min)
+[2/96] cv-dapper  At_dapper_s1_cv51  ETA 754 min
+round  5  val macroF1 0.9109
+round 10  val macroF1 0.9108
+round 15  val macroF1 0.9114
+round 20  val macroF1 0.9117
+SAVED At_dapper_s1_cv51 macroF1 0.9870  bacc 0.9821  trainF1 0.9993 (6.6 min)
+[3/96] cv-dapper  At_dapper_s1_cv52  ETA 740 min
+round  5  val macroF1 0.9058
+round 10  val macroF1 0.9050
+round 15  val macroF1 0.9050
+round 20  val macroF1 0.9053
+SAVED At_dapper_s1_cv52 macroF1 0.9946  bacc 0.9925  trainF1 0.9993 (5.8 min)
+[4/96] cv-dapper  At_dapper_s1_cv53  ETA 686 min
+round  5  val macroF1 0.9150
+round 10  val macroF1 0.9155
+round 15  val macroF1 0.9150
+round 20  val macroF1 0.9155
+SAVED At_dapper_s1_cv53 macroF1 0.9888  bacc 0.9895  trainF1 0.9998 (6.5 min)
+[5/96] cv-dapper  At_dapper_s1_cv54  ETA 668 min
+round  5  val macroF1 0.9966
+round 10  val macroF1 0.9951
+round 15  val macroF1 0.9950
+round 20  val macroF1 0.9940
+SAVED At_dapper_s1_cv54 macroF1 0.9996  bacc 0.9994  trainF1 0.9157 (5.7 min)
+[6/96] cv-dapper  Bt_dapper_s1_cv50  ETA 638 min
+round  5  val macroF1 0.8926
+round 10  val macroF1 0.9014
+round 15  val macroF1 0.9032
+round 20  val macroF1 0.9049
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+SAVED Bt_dapper_s1_cv50 macroF1 0.9637  bacc 0.9726  trainF1 0.9933 (5.4 min)
+[7/96] cv-dapper  Bt_dapper_s1_cv51  ETA 617 min
+round  5  val macroF1 0.9006
+round 10  val macroF1 0.9056
+round 15  val macroF1 0.9045
+round 20  val macroF1 0.9065
+SAVED Bt_dapper_s1_cv51 macroF1 0.9926  bacc 0.9938  trainF1 0.9989 (8.2 min)
+[8/96] cv-dapper  Bt_dapper_s1_cv52  ETA 633 min
+round  5  val macroF1 0.9722
+round 10  val macroF1 0.9753
+round 15  val macroF1 0.9600
+round 20  val macroF1 0.9577
+SAVED Bt_dapper_s1_cv52 macroF1 0.9770  bacc 0.9786  trainF1 0.9997 (8.9 min)
+[9/96] cv-dapper  Bt_dapper_s1_cv53  ETA 652 min
+round  5  val macroF1 0.9315
+round 10  val macroF1 0.9548
+round 15  val macroF1 0.9682
+round 20  val macroF1 0.9744
+SAVED Bt_dapper_s1_cv53 macroF1 0.9870  bacc 0.9877  trainF1 0.9160 (9.8 min)
+[10/96] cv-dapper  Bt_dapper_s1_cv54  ETA 673 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round  5  val macroF1 0.8093
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 10  val macroF1 0.8101
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 15  val macroF1 0.8096
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 20  val macroF1 0.8098
+SAVED Bt_dapper_s1_cv54 macroF1 0.9789  bacc 0.9869  trainF1 0.9995 (7.2 min)
+[11/96] companion  At_dapper_s1_defnocomp_cv50  ETA 665 min
+round  5  val macroF1 0.8933
+round 10  val macroF1 0.8882
+round 15  val macroF1 0.8845
+round 20  val macroF1 0.8851
+SAVED At_dapper_s1_defnocomp_cv50 macroF1 0.9816  bacc 0.9798  trainF1 0.9148 (3.4 min)
+[12/96] companion  At_dapper_s1_defnocomp_cv51  ETA 628 min
+round  5  val macroF1 0.8986
+round 10  val macroF1 0.9013
+round 15  val macroF1 0.9029
+round 20  val macroF1 0.9044
+SAVED At_dapper_s1_defnocomp_cv51 macroF1 0.9724  bacc 0.9698  trainF1 0.9986 (15.1 min)
+[13/96] companion  At_dapper_s1_defnocomp_cv52  ETA 677 min
+round  5  val macroF1 0.8899
+round 10  val macroF1 0.8918
+round 15  val macroF1 0.8930
+round 20  val macroF1 0.8927
+SAVED At_dapper_s1_defnocomp_cv52 macroF1 0.9875  bacc 0.9846  trainF1 0.9975 (4.8 min)
+[14/96] companion  At_dapper_s1_defnocomp_cv53  ETA 650 min
+round  5  val macroF1 0.8997
+round 10  val macroF1 0.8998
+round 15  val macroF1 0.9010
+round 20  val macroF1 0.9012
+SAVED At_dapper_s1_defnocomp_cv53 macroF1 0.9759  bacc 0.9777  trainF1 0.9974 (6.0 min)
+[15/96] companion  At_dapper_s1_defnocomp_cv54  ETA 634 min
+round  5  val macroF1 0.9698
+round 10  val macroF1 0.9789
+round 15  val macroF1 0.9768
+round 20  val macroF1 0.9795
+SAVED At_dapper_s1_defnocomp_cv54 macroF1 0.9876  bacc 0.9864  trainF1 0.9133 (4.9 min)
+[16/96] companion  Bt_dapper_s1_defnocomp_cv50  ETA 614 min
+round  5  val macroF1 0.8736
+round 10  val macroF1 0.8817
+round 15  val macroF1 0.8747
+round 20  val macroF1 0.8700
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+SAVED Bt_dapper_s1_defnocomp_cv50 macroF1 0.9490  bacc 0.9582  trainF1 0.9954 (4.6 min)
+[17/96] companion  Bt_dapper_s1_defnocomp_cv51  ETA 595 min
+round  5  val macroF1 0.8781
+round 10  val macroF1 0.8831
+round 15  val macroF1 0.8779
+round 20  val macroF1 0.8765
+SAVED Bt_dapper_s1_defnocomp_cv51 macroF1 0.9735  bacc 0.9744  trainF1 0.9966 (3.5 min)
+[18/96] companion  Bt_dapper_s1_defnocomp_cv52  ETA 570 min
+round  5  val macroF1 0.9587
+round 10  val macroF1 0.9533
+round 15  val macroF1 0.9470
+round 20  val macroF1 0.9394
+SAVED Bt_dapper_s1_defnocomp_cv52 macroF1 0.9598  bacc 0.9614  trainF1 0.9986 (3.4 min)
+[19/96] companion  Bt_dapper_s1_defnocomp_cv53  ETA 547 min
+round  5  val macroF1 0.9183
+round 10  val macroF1 0.9370
+round 15  val macroF1 0.9498
+round 20  val macroF1 0.9494
+SAVED Bt_dapper_s1_defnocomp_cv53 macroF1 0.9685  bacc 0.9707  trainF1 0.9144 (3.2 min)
+[20/96] companion  Bt_dapper_s1_defnocomp_cv54  ETA 526 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+round  5  val macroF1 0.7945
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+round 10  val macroF1 0.7894
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+round 15  val macroF1 0.7878
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+round 20  val macroF1 0.7865
+SAVED Bt_dapper_s1_defnocomp_cv54 macroF1 0.9612  bacc 0.9613  trainF1 0.9985 (3.4 min)
+[21/96] companion  At_dapper_s1_defnocomp_human_cv50  ETA 507 min
+round  5  val macroF1 0.8695
+round 10  val macroF1 0.8751
+round 15  val macroF1 0.8716
+round 20  val macroF1 0.8665
+SAVED At_dapper_s1_defnocomp_human_cv50 macroF1 0.9355  bacc 0.9298  trainF1 0.9145 (3.6 min)
+[22/96] companion  At_dapper_s1_defnocomp_human_cv51  ETA 491 min
+round  5  val macroF1 0.8560
+round 10  val macroF1 0.8620
+round 15  val macroF1 0.8601
+round 20  val macroF1 0.8602
+SAVED At_dapper_s1_defnocomp_human_cv51 macroF1 0.9593  bacc 0.9524  trainF1 0.9979 (4.0 min)
+[23/96] companion  At_dapper_s1_defnocomp_human_cv52  ETA 476 min
+round  5  val macroF1 0.8623
+round 10  val macroF1 0.8606
+round 15  val macroF1 0.8593
+round 20  val macroF1 0.8584
+SAVED At_dapper_s1_defnocomp_human_cv52 macroF1 0.9517  bacc 0.9427  trainF1 0.9965 (3.1 min)
+[24/96] companion  At_dapper_s1_defnocomp_human_cv53  ETA 460 min
+round  5  val macroF1 0.8723
+round 10  val macroF1 0.8766
+round 15  val macroF1 0.8729
+round 20  val macroF1 0.8712
+SAVED At_dapper_s1_defnocomp_human_cv53 macroF1 0.9403  bacc 0.9383  trainF1 0.9953 (3.1 min)
+[25/96] companion  At_dapper_s1_defnocomp_human_cv54  ETA 445 min
+round  5  val macroF1 0.9179
+round 10  val macroF1 0.9226
+round 15  val macroF1 0.9075
+round 20  val macroF1 0.9096
+SAVED At_dapper_s1_defnocomp_human_cv54 macroF1 0.9531  bacc 0.9560  trainF1 0.9100 (3.1 min)
+[26/96] companion  Bt_dapper_s1_defnocomp_human_cv50  ETA 431 min
+round  5  val macroF1 0.8315
+round 10  val macroF1 0.8218
+round 15  val macroF1 0.7770
+round 20  val macroF1 0.7755
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+SAVED Bt_dapper_s1_defnocomp_human_cv50 macroF1 0.9296  bacc 0.9449  trainF1 0.9937 (2.9 min)
+[27/96] companion  Bt_dapper_s1_defnocomp_human_cv51  ETA 417 min
+round  5  val macroF1 0.8303
+round 10  val macroF1 0.8441
+round 15  val macroF1 0.8450
+round 20  val macroF1 0.8242
+SAVED Bt_dapper_s1_defnocomp_human_cv51 macroF1 0.9294  bacc 0.9323  trainF1 0.9925 (3.0 min)
+[28/96] companion  Bt_dapper_s1_defnocomp_human_cv52  ETA 404 min
+round  5  val macroF1 0.9070
+round 10  val macroF1 0.9034
+round 15  val macroF1 0.8788
+round 20  val macroF1 0.8769
+SAVED Bt_dapper_s1_defnocomp_human_cv52 macroF1 0.9115  bacc 0.9195  trainF1 0.9955 (4.1 min)
+[29/96] companion  Bt_dapper_s1_defnocomp_human_cv53  ETA 395 min
+round  5  val macroF1 0.8905
+round 10  val macroF1 0.8967
+round 15  val macroF1 0.9114
+round 20  val macroF1 0.9114
+SAVED Bt_dapper_s1_defnocomp_human_cv53 macroF1 0.9275  bacc 0.9251  trainF1 0.9118 (3.7 min)
+[30/96] companion  Bt_dapper_s1_defnocomp_human_cv54  ETA 385 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+round  5  val macroF1 0.7864
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+round 10  val macroF1 0.7782
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+round 15  val macroF1 0.7681
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+round 20  val macroF1 0.7642
+SAVED Bt_dapper_s1_defnocomp_human_cv54 macroF1 0.9301  bacc 0.9332  trainF1 0.9952 (4.3 min)
+[31/96] lodo       At_dapper_s1_lodo1  ETA 377 min
+round  5  val macroF1 0.9090
+round 10  val macroF1 0.9106
+round 15  val macroF1 0.9083
+round 20  val macroF1 0.9083
+SAVED At_dapper_s1_lodo1 macroF1 0.9898  bacc 0.9853  trainF1 0.9165 (4.1 min)
+[32/96] lodo       At_dapper_s1_lodo2  ETA 368 min
+round  5  val macroF1 0.8320
+round 10  val macroF1 0.8320
+round 15  val macroF1 0.8303
+round 20  val macroF1 0.8310
+SAVED At_dapper_s1_lodo2 macroF1 0.9935  bacc 0.9919  trainF1 0.9991 (4.5 min)
+[33/96] lodo       At_dapper_s1_lodo3  ETA 361 min
+round  5  val macroF1 0.9084
+round 10  val macroF1 0.9106
+round 15  val macroF1 0.9103
+round 20  val macroF1 0.9096
+SAVED At_dapper_s1_lodo3 macroF1 0.9885  bacc 0.9906  trainF1 0.9996 (3.7 min)
+[34/96] lodo       Bt_dapper_s1_lodo1  ETA 351 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round  5  val macroF1 0.8025
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 10  val macroF1 0.8169
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 15  val macroF1 0.8150
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 20  val macroF1 0.8196
+SAVED Bt_dapper_s1_lodo1 macroF1 0.9946  bacc 0.9938  trainF1 0.9162 (4.0 min)
+[35/96] lodo       Bt_dapper_s1_lodo2  ETA 343 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round  5  val macroF1 0.8177
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 10  val macroF1 0.8164
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 15  val macroF1 0.8164
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 20  val macroF1 0.8180
+SAVED Bt_dapper_s1_lodo2 macroF1 0.9445  bacc 0.9693  trainF1 0.9978 (4.1 min)
+[36/96] lodo       Bt_dapper_s1_lodo3  ETA 336 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round  5  val macroF1 0.6983
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 10  val macroF1 0.7179
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 15  val macroF1 0.7223
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 20  val macroF1 0.7270
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+SAVED Bt_dapper_s1_lodo3 macroF1 0.9695  bacc 0.9773  trainF1 0.9991 (3.9 min)
+[37/96] lomt       At_dapper_s1_lomtdelivery  ETA 328 min
+round  5  val macroF1 0.9135
+round 10  val macroF1 0.9150
+round 15  val macroF1 0.9123
+round 20  val macroF1 0.9149
+SAVED At_dapper_s1_lomtdelivery macroF1 0.6571  bacc 0.9766  trainF1 0.9990 (4.2 min)
+[38/96] lomt       At_dapper_s1_lomtsurvey  ETA 321 min
+round  5  val macroF1 0.9124
+round 10  val macroF1 0.9143
+round 15  val macroF1 0.9124
+round 20  val macroF1 0.9124
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+SAVED At_dapper_s1_lomtsurvey macroF1 0.6593  bacc 0.9906  trainF1 0.9972 (3.1 min)
+[39/96] lomt       At_dapper_s1_lomtinspection  ETA 312 min
+round  5  val macroF1 0.9082
+round 10  val macroF1 0.9081
+round 15  val macroF1 0.9064
+round 20  val macroF1 0.9058
+SAVED At_dapper_s1_lomtinspection macroF1 0.6567  bacc 0.9914  trainF1 1.0000 (3.0 min)
+[40/96] lomt       Bt_dapper_s1_lomtpatrol  ETA 304 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round  5  val macroF1 0.8043
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 10  val macroF1 0.8080
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 15  val macroF1 0.8107
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 20  val macroF1 0.8211
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+SAVED Bt_dapper_s1_lomtpatrol macroF1 0.6458  bacc 0.9688  trainF1 0.9997 (3.0 min)
+[41/96] lomt       Bt_dapper_s1_lomtsurvey  ETA 295 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round  5  val macroF1 0.8061
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 10  val macroF1 0.8081
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 15  val macroF1 0.8134
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 20  val macroF1 0.8235
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+SAVED Bt_dapper_s1_lomtsurvey macroF1 0.6648  bacc 0.9977  trainF1 0.9992 (3.0 min)
+[42/96] lomt       Bt_dapper_s1_lomtinspection  ETA 287 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round  5  val macroF1 0.7962
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 10  val macroF1 0.8088
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 15  val macroF1 0.8197
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 20  val macroF1 0.8179
+SAVED Bt_dapper_s1_lomtinspection macroF1 0.6634  bacc 0.9943  trainF1 0.9983 (3.0 min)
+[43/96] onboarding At_dapper_s1_hoA3  ETA 279 min
+round  5  val macroF1 0.7527
+round 10  val macroF1 0.7505
+round 15  val macroF1 0.7569
+round 20  val macroF1 0.7587
+holdout A3  shots  0  macroF1 1.0000
+holdout A3  shots  5  macroF1 0.9964
+holdout A3  shots 10  macroF1 1.0000
+holdout A3  shots 20  macroF1 0.9965
+holdout A3  shots 50  macroF1 1.0000
+SAVED At_dapper_s1_hoA3 macroF1 0.6622  bacc 0.9957  trainF1 0.9994 (2.7 min)
+[44/96] onboarding At_dapper_s2_hoA3  ETA 271 min
+round  5  val macroF1 0.7519
+round 10  val macroF1 0.7454
+round 15  val macroF1 0.7562
+round 20  val macroF1 0.7537
+holdout A3  shots  0  macroF1 1.0000
+holdout A3  shots  5  macroF1 1.0000
+holdout A3  shots 10  macroF1 1.0000
+holdout A3  shots 20  macroF1 1.0000
+holdout A3  shots 50  macroF1 1.0000
+SAVED At_dapper_s2_hoA3 macroF1 0.6637  bacc 0.9979  trainF1 0.9994 (2.8 min)
+[45/96] onboarding Bt_dapper_s1_hoB3  ETA 264 min
+round  5  val macroF1 0.8794
+round 10  val macroF1 0.8834
+round 15  val macroF1 0.8824
+round 20  val macroF1 0.8653
+holdout B3  shots  0  macroF1 0.6577
+holdout B3  shots  5  macroF1 0.6133
+holdout B3  shots 10  macroF1 0.6630
+holdout B3  shots 20  macroF1 0.6648
+holdout B3  shots 50  macroF1 0.6648
+SAVED Bt_dapper_s1_hoB3 macroF1 0.9826  bacc 0.9823  trainF1 0.8874 (2.7 min)
+[46/96] onboarding Bt_dapper_s2_hoB3  ETA 256 min
+round  5  val macroF1 0.8789
+round 10  val macroF1 0.8840
+round 15  val macroF1 0.8827
+round 20  val macroF1 0.8795
+holdout B3  shots  0  macroF1 0.6648
+holdout B3  shots  5  macroF1 0.6630
+holdout B3  shots 10  macroF1 0.6648
+holdout B3  shots 20  macroF1 0.6648
+holdout B3  shots 50  macroF1 0.6611
+SAVED Bt_dapper_s2_hoB3 macroF1 0.9826  bacc 0.9823  trainF1 0.8884 (2.8 min)
+[47/96] cv-methods At_fedbn_s1_cv50  ETA 249 min
+round  5  val macroF1 0.9060
+round 10  val macroF1 0.9058
+round 15  val macroF1 0.9063
+round 20  val macroF1 0.9030
+SAVED At_fedbn_s1_cv50 macroF1 0.9929  bacc 0.9898  trainF1 0.9150 (3.3 min)
+[48/96] cv-methods At_fedbn_s1_cv51  ETA 242 min
+round  5  val macroF1 0.9102
+round 10  val macroF1 0.9109
+round 15  val macroF1 0.9109
+round 20  val macroF1 0.9109
+SAVED At_fedbn_s1_cv51 macroF1 0.9878  bacc 0.9837  trainF1 0.9981 (3.4 min)
+[49/96] cv-methods At_fedbn_s1_cv52  ETA 236 min
+round  5  val macroF1 0.9063
+round 10  val macroF1 0.9064
+round 15  val macroF1 0.9048
+round 20  val macroF1 0.9048
+SAVED At_fedbn_s1_cv52 macroF1 0.9946  bacc 0.9939  trainF1 0.9991 (3.0 min)
+[50/96] cv-methods At_fedbn_s1_cv53  ETA 229 min
+round  5  val macroF1 0.9150
+round 10  val macroF1 0.9162
+round 15  val macroF1 0.9162
+round 20  val macroF1 0.9162
+SAVED At_fedbn_s1_cv53 macroF1 0.9885  bacc 0.9899  trainF1 0.9982 (3.1 min)
+[51/96] cv-methods At_fedbn_s1_cv54  ETA 223 min
+round  5  val macroF1 0.9938
+round 10  val macroF1 0.9914
+round 15  val macroF1 0.9904
+round 20  val macroF1 0.9879
+SAVED At_fedbn_s1_cv54 macroF1 0.9980  bacc 0.9971  trainF1 0.9126 (3.0 min)
+[52/96] cv-methods Bt_fedbn_s1_cv50  ETA 217 min
+round  5  val macroF1 0.8828
+round 10  val macroF1 0.8974
+round 15  val macroF1 0.8981
+round 20  val macroF1 0.9026
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+SAVED Bt_fedbn_s1_cv50 macroF1 0.9564  bacc 0.9647  trainF1 0.9930 (2.9 min)
+[53/96] cv-methods Bt_fedbn_s1_cv51  ETA 210 min
+round  5  val macroF1 0.8842
+round 10  val macroF1 0.8997
+round 15  val macroF1 0.9025
+round 20  val macroF1 0.9009
+SAVED Bt_fedbn_s1_cv51 macroF1 0.9892  bacc 0.9896  trainF1 0.9788 (2.5 min)
+[54/96] cv-methods Bt_fedbn_s1_cv52  ETA 204 min
+round  5  val macroF1 0.9697
+round 10  val macroF1 0.9693
+round 15  val macroF1 0.9639
+round 20  val macroF1 0.9682
+SAVED Bt_fedbn_s1_cv52 macroF1 0.9774  bacc 0.9804  trainF1 0.9973 (2.5 min)
+[55/96] cv-methods Bt_fedbn_s1_cv53  ETA 198 min
+round  5  val macroF1 0.9333
+round 10  val macroF1 0.9458
+round 15  val macroF1 0.9617
+round 20  val macroF1 0.9585
+SAVED Bt_fedbn_s1_cv53 macroF1 0.9870  bacc 0.9867  trainF1 0.9161 (2.4 min)
+[56/96] cv-methods Bt_fedbn_s1_cv54  ETA 191 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:2524: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+round  5  val macroF1 0.8070
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 10  val macroF1 0.8086
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 15  val macroF1 0.8095
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 20  val macroF1 0.8100
+SAVED Bt_fedbn_s1_cv54 macroF1 0.9825  bacc 0.9877  trainF1 0.9987 (2.4 min)
+[57/96] cv-methods At_fedavg_s1_cv50  ETA 185 min
+round  5  val macroF1 0.7711
+round 10  val macroF1 0.8446
+round 15  val macroF1 0.8950
+round 20  val macroF1 0.8948
+SAVED At_fedavg_s1_cv50 macroF1 0.9850  bacc 0.9807  trainF1 0.9122 (2.4 min)
+[58/96] cv-methods At_fedavg_s1_cv51  ETA 179 min
+round  5  val macroF1 0.8628
+round 10  val macroF1 0.8844
+round 15  val macroF1 0.9022
+round 20  val macroF1 0.9057
+SAVED At_fedavg_s1_cv51 macroF1 0.9818  bacc 0.9788  trainF1 0.9951 (2.4 min)
+[59/96] cv-methods At_fedavg_s1_cv52  ETA 173 min
+round  5  val macroF1 0.8756
+round 10  val macroF1 0.9043
+round 15  val macroF1 0.9030
+round 20  val macroF1 0.9050
+SAVED At_fedavg_s1_cv52 macroF1 0.9908  bacc 0.9878  trainF1 0.9983 (2.4 min)
+[60/96] cv-methods At_fedavg_s1_cv53  ETA 167 min
+round  5  val macroF1 0.8714
+round 10  val macroF1 0.9052
+round 15  val macroF1 0.9072
+round 20  val macroF1 0.9105
+SAVED At_fedavg_s1_cv53 macroF1 0.9851  bacc 0.9886  trainF1 0.9977 (2.4 min)
+[61/96] cv-methods At_fedavg_s1_cv54  ETA 162 min
+round  5  val macroF1 0.8271
+round 10  val macroF1 0.9168
+round 15  val macroF1 0.9574
+round 20  val macroF1 0.9778
+SAVED At_fedavg_s1_cv54 macroF1 0.9859  bacc 0.9847  trainF1 0.9144 (2.4 min)
+[62/96] cv-methods Bt_fedavg_s1_cv50  ETA 156 min
+round  5  val macroF1 0.8321
+round 10  val macroF1 0.8814
+round 15  val macroF1 0.8933
+round 20  val macroF1 0.8967
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+SAVED Bt_fedavg_s1_cv50 macroF1 0.9702  bacc 0.9805  trainF1 0.9988 (2.4 min)
+[63/96] cv-methods Bt_fedavg_s1_cv51  ETA 150 min
+round  5  val macroF1 0.8396
+round 10  val macroF1 0.8720
+round 15  val macroF1 0.8764
+round 20  val macroF1 0.8810
+SAVED Bt_fedavg_s1_cv51 macroF1 0.9687  bacc 0.9827  trainF1 0.9981 (2.4 min)
+[64/96] cv-methods Bt_fedavg_s1_cv52  ETA 145 min
+round  5  val macroF1 0.9002
+round 10  val macroF1 0.9571
+round 15  val macroF1 0.9651
+round 20  val macroF1 0.9646
+SAVED Bt_fedavg_s1_cv52 macroF1 0.9830  bacc 0.9866  trainF1 0.9987 (2.4 min)
+[65/96] cv-methods Bt_fedavg_s1_cv53  ETA 140 min
+round  5  val macroF1 0.8569
+round 10  val macroF1 0.9009
+round 15  val macroF1 0.9162
+round 20  val macroF1 0.9333
+SAVED Bt_fedavg_s1_cv53 macroF1 0.9628  bacc 0.9532  trainF1 0.9155 (2.5 min)
+[66/96] cv-methods Bt_fedavg_s1_cv54  ETA 134 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round  5  val macroF1 0.7552
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 10  val macroF1 0.7923
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 15  val macroF1 0.8002
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 20  val macroF1 0.8035
+SAVED Bt_fedavg_s1_cv54 macroF1 0.9660  bacc 0.9801  trainF1 0.9950 (3.1 min)
+[67/96] cv-methods At_central_s1_cv50  ETA 130 min
+SAVED At_central_s1_cv50 macroF1 0.9933  bacc 0.9911  trainF1 0.9160 (3.0 min)
+[68/96] cv-methods At_central_s1_cv51  ETA 125 min
+SAVED At_central_s1_cv51 macroF1 0.9846  bacc 0.9833  trainF1 0.9993 (3.0 min)
+[69/96] cv-methods At_central_s1_cv52  ETA 120 min
+SAVED At_central_s1_cv52 macroF1 0.9928  bacc 0.9896  trainF1 0.9995 (2.6 min)
+[70/96] cv-methods At_central_s1_cv53  ETA 115 min
+SAVED At_central_s1_cv53 macroF1 0.9845  bacc 0.9836  trainF1 0.9991 (2.8 min)
+[71/96] cv-methods At_central_s1_cv54  ETA 111 min
+SAVED At_central_s1_cv54 macroF1 0.9960  bacc 0.9961  trainF1 0.9147 (2.6 min)
+[72/96] cv-methods Bt_central_s1_cv50  ETA 106 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+SAVED Bt_central_s1_cv50 macroF1 0.9723  bacc 0.9829  trainF1 0.9997 (2.5 min)
+[73/96] cv-methods Bt_central_s1_cv51  ETA 101 min
+SAVED Bt_central_s1_cv51 macroF1 0.9923  bacc 0.9927  trainF1 0.9997 (2.4 min)
+[74/96] cv-methods Bt_central_s1_cv52  ETA 96 min
+SAVED Bt_central_s1_cv52 macroF1 0.9917  bacc 0.9911  trainF1 0.9997 (2.6 min)
+[75/96] cv-methods Bt_central_s1_cv53  ETA 92 min
+SAVED Bt_central_s1_cv53 macroF1 0.9885  bacc 0.9885  trainF1 0.9166 (2.9 min)
+[76/96] cv-methods Bt_central_s1_cv54  ETA 87 min
+SAVED Bt_central_s1_cv54 macroF1 0.9884  bacc 0.9893  trainF1 0.9999 (3.0 min)
+[77/96] cv-methods At_local_s1_cv50  ETA 83 min
+SAVED At_local_s1_cv50 macroF1 0.9183  bacc 0.8828  trainF1 0.9162 (2.8 min)
+[78/96] cv-methods At_local_s1_cv51  ETA 78 min
+SAVED At_local_s1_cv51 macroF1 0.9793  bacc 0.9757  trainF1 0.9997 (2.9 min)
+[79/96] cv-methods At_local_s1_cv52  ETA 74 min
+SAVED At_local_s1_cv52 macroF1 0.9943  bacc 0.9925  trainF1 0.9996 (2.9 min)
+[80/96] cv-methods At_local_s1_cv53  ETA 70 min
+SAVED At_local_s1_cv53 macroF1 0.9871  bacc 0.9889  trainF1 0.9999 (2.8 min)
+[81/96] cv-methods At_local_s1_cv54  ETA 65 min
+SAVED At_local_s1_cv54 macroF1 0.9932  bacc 0.9912  trainF1 0.9162 (2.5 min)
+[82/96] cv-methods Bt_local_s1_cv50  ETA 61 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+SAVED Bt_local_s1_cv50 macroF1 0.9650  bacc 0.9743  trainF1 0.9999 (3.3 min)
+[83/96] cv-methods Bt_local_s1_cv51  ETA 57 min
+SAVED Bt_local_s1_cv51 macroF1 0.9844  bacc 0.9899  trainF1 0.9999 (2.8 min)
+[84/96] cv-methods Bt_local_s1_cv52  ETA 53 min
+SAVED Bt_local_s1_cv52 macroF1 0.9781  bacc 0.9759  trainF1 0.9999 (2.9 min)
+[85/96] cv-methods Bt_local_s1_cv53  ETA 48 min
+SAVED Bt_local_s1_cv53 macroF1 0.9130  bacc 0.8786  trainF1 0.9167 (2.5 min)
+[86/96] cv-methods Bt_local_s1_cv54  ETA 44 min
+SAVED Bt_local_s1_cv54 macroF1 0.9846  bacc 0.9842  trainF1 0.9999 (2.7 min)
+[87/96] cv-methods At_fedprox_s1_cv50  ETA 40 min
+round  5  val macroF1 0.7817
+round 10  val macroF1 0.8497
+round 15  val macroF1 0.8854
+round 20  val macroF1 0.8972
+SAVED At_fedprox_s1_cv50 macroF1 0.9881  bacc 0.9847  trainF1 0.9109 (3.9 min)
+[88/96] cv-methods At_fedprox_s1_cv51  ETA 36 min
+round  5  val macroF1 0.8392
+round 10  val macroF1 0.8779
+round 15  val macroF1 0.8982
+round 20  val macroF1 0.9058
+SAVED At_fedprox_s1_cv51 macroF1 0.9792  bacc 0.9737  trainF1 0.9945 (4.5 min)
+[89/96] cv-methods At_fedprox_s1_cv52  ETA 32 min
+round  5  val macroF1 0.8471
+round 10  val macroF1 0.9021
+round 15  val macroF1 0.9017
+round 20  val macroF1 0.9036
+SAVED At_fedprox_s1_cv52 macroF1 0.9920  bacc 0.9909  trainF1 0.9972 (4.0 min)
+[90/96] cv-methods At_fedprox_s1_cv53  ETA 28 min
+round  5  val macroF1 0.8551
+round 10  val macroF1 0.9016
+round 15  val macroF1 0.9068
+round 20  val macroF1 0.9093
+SAVED At_fedprox_s1_cv53 macroF1 0.9872  bacc 0.9897  trainF1 0.9971 (4.0 min)
+[91/96] cv-methods At_fedprox_s1_cv54  ETA 24 min
+round  5  val macroF1 0.8518
+round 10  val macroF1 0.9060
+round 15  val macroF1 0.9637
+round 20  val macroF1 0.9828
+SAVED At_fedprox_s1_cv54 macroF1 0.9867  bacc 0.9847  trainF1 0.9142 (3.8 min)
+[92/96] cv-methods Bt_fedprox_s1_cv50  ETA 20 min
+round  5  val macroF1 0.8094
+round 10  val macroF1 0.8803
+round 15  val macroF1 0.8878
+round 20  val macroF1 0.8913
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+SAVED Bt_fedprox_s1_cv50 macroF1 0.9704  bacc 0.9805  trainF1 0.9964 (3.7 min)
+[93/96] cv-methods Bt_fedprox_s1_cv51  ETA 16 min
+round  5  val macroF1 0.8332
+round 10  val macroF1 0.8823
+round 15  val macroF1 0.8861
+round 20  val macroF1 0.8971
+SAVED Bt_fedprox_s1_cv51 macroF1 0.9756  bacc 0.9864  trainF1 0.9964 (4.2 min)
+[94/96] cv-methods Bt_fedprox_s1_cv52  ETA 12 min
+round  5  val macroF1 0.8819
+round 10  val macroF1 0.9525
+round 15  val macroF1 0.9637
+round 20  val macroF1 0.9648
+SAVED Bt_fedprox_s1_cv52 macroF1 0.9816  bacc 0.9836  trainF1 0.9984 (4.6 min)
+[95/96] cv-methods Bt_fedprox_s1_cv53  ETA 8 min
+round  5  val macroF1 0.8735
+round 10  val macroF1 0.9015
+round 15  val macroF1 0.9165
+round 20  val macroF1 0.9331
+SAVED Bt_fedprox_s1_cv53 macroF1 0.9680  bacc 0.9590  trainF1 0.9132 (3.8 min)
+[96/96] cv-methods Bt_fedprox_s1_cv54  ETA 4 min
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round  5  val macroF1 0.7285
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 10  val macroF1 0.7858
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 15  val macroF1 0.7959
+C:\Users\kmkho\AppData\Roaming\Python\Python313\site-packages\sklearn\metrics\_classification.py:407: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+round 20  val macroF1 0.8039
+SAVED Bt_fedprox_s1_cv54 macroF1 0.9672  bacc 0.9797  trainF1 0.9953 (3.6 min)
+queue done in 386.0 min

@@ -1,0 +1,148 @@
+{
+ "net": "A",
+ "task": "op3",
+ "method": "dapper",
+ "seed": 1,
+ "holdout": "",
+ "classes": [
+  "Ground",
+  "Autonomous flight",
+  "Tele-operation"
+ ],
+ "rounds": 20,
+ "steps": 50,
+ "T": 128,
+ "n_feat": 90,
+ "train_sites": [
+  "A1",
+  "A2",
+  "A3",
+  "A4"
+ ],
+ "overall": {
+  "macro_f1": 0.9996022731321249,
+  "bacc": 0.9994162288382954,
+  "acc": 0.9995798319327731,
+  "site_mean_f1": 0.9162241367835087,
+  "site_mean_f1_present": 0.999557470116842,
+  "site_mean_bacc": 0.9992816091954023,
+  "train_f1": 0.9156646831341886
+ },
+ "per_site": {
+  "A1": {
+   "f1": 0.6666666666666666,
+   "f1p": 1.0,
+   "bacc": 1.0,
+   "acc": 1.0,
+   "n": 529,
+   "classes_present": [
+    0,
+    1
+   ]
+  },
+  "A2": {
+   "f1": 0.9982298804673682,
+   "f1p": 0.9982298804673682,
+   "bacc": 0.9971264367816092,
+   "acc": 0.9985528219971056,
+   "n": 691,
+   "classes_present": [
+    0,
+    1,
+    2
+   ]
+  },
+  "A3": {
+   "f1": 1.0,
+   "f1p": 1.0,
+   "bacc": 1.0,
+   "acc": 1.0,
+   "n": 706,
+   "classes_present": [
+    0,
+    1,
+    2
+   ]
+  },
+  "A4": {
+   "f1": 1.0,
+   "f1p": 1.0,
+   "bacc": 1.0,
+   "acc": 1.0,
+   "n": 454,
+   "classes_present": [
+    0,
+    1,
+    2
+   ]
+  }
+ },
+ "confusion": [
+  [
+   570,
+   1,
+   0
+  ],
+  [
+   0,
+   1578,
+   0
+  ],
+  [
+   0,
+   0,
+   231
+  ]
+ ],
+ "history": [
+  {
+   "round": 5,
+   "val_macro_f1": 0.9965828834625061,
+   "val_macro_f1_present": 0.9965828834625061
+  },
+  {
+   "round": 10,
+   "val_macro_f1": 0.995131378485337,
+   "val_macro_f1_present": 0.995131378485337
+  },
+  {
+   "round": 15,
+   "val_macro_f1": 0.9949970631869554,
+   "val_macro_f1_present": 0.9949970631869554
+  },
+  {
+   "round": 20,
+   "val_macro_f1": 0.9940313605065514,
+   "val_macro_f1_present": 0.9940313605065514
+  }
+ ],
+ "onboard": {},
+ "defense": "none",
+ "overhead": 0.0,
+ "split": "cv5",
+ "fold": 4,
+ "mtype": "",
+ "sorties_per_split": {
+  "A1": [
+   17,
+   8,
+   5
+  ],
+  "A2": [
+   26,
+   7,
+   8
+  ],
+  "A3": [
+   29,
+   11,
+   11
+  ],
+  "A4": [
+   28,
+   9,
+   8
+  ]
+ },
+ "minutes": 5.67
+}
