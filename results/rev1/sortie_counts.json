@@ -1,0 +1,2041 @@
+{
+ "rows": [
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 11,
+   "split": "train",
+   "state": 0,
+   "windows": 134,
+   "sorties": 6
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 11,
+   "split": "train",
+   "state": 1,
+   "windows": 365,
+   "sorties": 4
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 11,
+   "split": "train",
+   "state": 2,
+   "windows": 73,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 11,
+   "split": "val",
+   "state": 0,
+   "windows": 39,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 11,
+   "split": "val",
+   "state": 1,
+   "windows": 248,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 11,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 11,
+   "split": "test",
+   "state": 0,
+   "windows": 18,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 11,
+   "split": "test",
+   "state": 1,
+   "windows": 209,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 11,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 12,
+   "split": "train",
+   "state": 0,
+   "windows": 224,
+   "sorties": 9
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 12,
+   "split": "train",
+   "state": 1,
+   "windows": 647,
+   "sorties": 5
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 12,
+   "split": "train",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 12,
+   "split": "val",
+   "state": 0,
+   "windows": 28,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 12,
+   "split": "val",
+   "state": 1,
+   "windows": 152,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 12,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 12,
+   "split": "test",
+   "state": 0,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 12,
+   "split": "test",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 12,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 13,
+   "split": "train",
+   "state": 0,
+   "windows": 162,
+   "sorties": 8
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 13,
+   "split": "train",
+   "state": 1,
+   "windows": 851,
+   "sorties": 5
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 13,
+   "split": "train",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 13,
+   "split": "val",
+   "state": 0,
+   "windows": 12,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 13,
+   "split": "val",
+   "state": 1,
+   "windows": 128,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 13,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 13,
+   "split": "test",
+   "state": 0,
+   "windows": 14,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 13,
+   "split": "test",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A1",
+   "drone": 13,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 21,
+   "split": "train",
+   "state": 0,
+   "windows": 233,
+   "sorties": 11
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 21,
+   "split": "train",
+   "state": 1,
+   "windows": 505,
+   "sorties": 5
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 21,
+   "split": "train",
+   "state": 2,
+   "windows": 113,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 21,
+   "split": "val",
+   "state": 0,
+   "windows": 20,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 21,
+   "split": "val",
+   "state": 1,
+   "windows": 154,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 21,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 21,
+   "split": "test",
+   "state": 0,
+   "windows": 24,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 21,
+   "split": "test",
+   "state": 1,
+   "windows": 27,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 21,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 22,
+   "split": "train",
+   "state": 0,
+   "windows": 132,
+   "sorties": 4
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 22,
+   "split": "train",
+   "state": 1,
+   "windows": 475,
+   "sorties": 4
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 22,
+   "split": "train",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 22,
+   "split": "val",
+   "state": 0,
+   "windows": 12,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 22,
+   "split": "val",
+   "state": 1,
+   "windows": 32,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 22,
+   "split": "val",
+   "state": 2,
+   "windows": 59,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 22,
+   "split": "test",
+   "state": 0,
+   "windows": 29,
+   "sorties": 3
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 22,
+   "split": "test",
+   "state": 1,
+   "windows": 316,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 22,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 23,
+   "split": "train",
+   "state": 0,
+   "windows": 189,
+   "sorties": 8
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 23,
+   "split": "train",
+   "state": 1,
+   "windows": 173,
+   "sorties": 5
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 23,
+   "split": "train",
+   "state": 2,
+   "windows": 212,
+   "sorties": 4
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 23,
+   "split": "val",
+   "state": 0,
+   "windows": 36,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 23,
+   "split": "val",
+   "state": 1,
+   "windows": 292,
+   "sorties": 3
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 23,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 23,
+   "split": "test",
+   "state": 0,
+   "windows": 62,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 23,
+   "split": "test",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A2",
+   "drone": 23,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 31,
+   "split": "train",
+   "state": 0,
+   "windows": 133,
+   "sorties": 7
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 31,
+   "split": "train",
+   "state": 1,
+   "windows": 283,
+   "sorties": 9
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 31,
+   "split": "train",
+   "state": 2,
+   "windows": 136,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 31,
+   "split": "val",
+   "state": 0,
+   "windows": 39,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 31,
+   "split": "val",
+   "state": 1,
+   "windows": 163,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 31,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 31,
+   "split": "test",
+   "state": 0,
+   "windows": 78,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 31,
+   "split": "test",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 31,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 32,
+   "split": "train",
+   "state": 0,
+   "windows": 352,
+   "sorties": 12
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 32,
+   "split": "train",
+   "state": 1,
+   "windows": 190,
+   "sorties": 6
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 32,
+   "split": "train",
+   "state": 2,
+   "windows": 110,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 32,
+   "split": "val",
+   "state": 0,
+   "windows": 63,
+   "sorties": 3
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 32,
+   "split": "val",
+   "state": 1,
+   "windows": 16,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 32,
+   "split": "val",
+   "state": 2,
+   "windows": 50,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 32,
+   "split": "test",
+   "state": 0,
+   "windows": 73,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 32,
+   "split": "test",
+   "state": 1,
+   "windows": 16,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 32,
+   "split": "test",
+   "state": 2,
+   "windows": 64,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 33,
+   "split": "train",
+   "state": 0,
+   "windows": 154,
+   "sorties": 9
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 33,
+   "split": "train",
+   "state": 1,
+   "windows": 392,
+   "sorties": 7
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 33,
+   "split": "train",
+   "state": 2,
+   "windows": 54,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 33,
+   "split": "val",
+   "state": 0,
+   "windows": 12,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 33,
+   "split": "val",
+   "state": 1,
+   "windows": 16,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 33,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 33,
+   "split": "test",
+   "state": 0,
+   "windows": 24,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 33,
+   "split": "test",
+   "state": 1,
+   "windows": 176,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A3",
+   "drone": 33,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 41,
+   "split": "train",
+   "state": 0,
+   "windows": 143,
+   "sorties": 7
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 41,
+   "split": "train",
+   "state": 1,
+   "windows": 354,
+   "sorties": 5
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 41,
+   "split": "train",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 41,
+   "split": "val",
+   "state": 0,
+   "windows": 4,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 41,
+   "split": "val",
+   "state": 1,
+   "windows": 13,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 41,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 41,
+   "split": "test",
+   "state": 0,
+   "windows": 74,
+   "sorties": 3
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 41,
+   "split": "test",
+   "state": 1,
+   "windows": 395,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 41,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 42,
+   "split": "train",
+   "state": 0,
+   "windows": 173,
+   "sorties": 8
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 42,
+   "split": "train",
+   "state": 1,
+   "windows": 488,
+   "sorties": 9
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 42,
+   "split": "train",
+   "state": 2,
+   "windows": 234,
+   "sorties": 4
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 42,
+   "split": "val",
+   "state": 0,
+   "windows": 38,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 42,
+   "split": "val",
+   "state": 1,
+   "windows": 14,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 42,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 42,
+   "split": "test",
+   "state": 0,
+   "windows": 1,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 42,
+   "split": "test",
+   "state": 1,
+   "windows": 26,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 42,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 43,
+   "split": "train",
+   "state": 0,
+   "windows": 205,
+   "sorties": 10
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 43,
+   "split": "train",
+   "state": 1,
+   "windows": 374,
+   "sorties": 7
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 43,
+   "split": "train",
+   "state": 2,
+   "windows": 104,
+   "sorties": 3
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 43,
+   "split": "val",
+   "state": 0,
+   "windows": 80,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 43,
+   "split": "val",
+   "state": 1,
+   "windows": 13,
+   "sorties": 1
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 43,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 43,
+   "split": "test",
+   "state": 0,
+   "windows": 63,
+   "sorties": 2
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 43,
+   "split": "test",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "A",
+   "site": "A4",
+   "drone": 43,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 11,
+   "split": "train",
+   "state": 0,
+   "windows": 164,
+   "sorties": 8
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 11,
+   "split": "train",
+   "state": 1,
+   "windows": 201,
+   "sorties": 2
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 11,
+   "split": "train",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 11,
+   "split": "val",
+   "state": 0,
+   "windows": 73,
+   "sorties": 3
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 11,
+   "split": "val",
+   "state": 1,
+   "windows": 402,
+   "sorties": 2
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 11,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 11,
+   "split": "test",
+   "state": 0,
+   "windows": 15,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 11,
+   "split": "test",
+   "state": 1,
+   "windows": 269,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 11,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 12,
+   "split": "train",
+   "state": 0,
+   "windows": 258,
+   "sorties": 12
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 12,
+   "split": "train",
+   "state": 1,
+   "windows": 538,
+   "sorties": 5
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 12,
+   "split": "train",
+   "state": 2,
+   "windows": 78,
+   "sorties": 2
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 12,
+   "split": "val",
+   "state": 0,
+   "windows": 49,
+   "sorties": 3
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 12,
+   "split": "val",
+   "state": 1,
+   "windows": 56,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 12,
+   "split": "val",
+   "state": 2,
+   "windows": 64,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 12,
+   "split": "test",
+   "state": 0,
+   "windows": 30,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 12,
+   "split": "test",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 12,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 13,
+   "split": "train",
+   "state": 0,
+   "windows": 216,
+   "sorties": 8
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 13,
+   "split": "train",
+   "state": 1,
+   "windows": 535,
+   "sorties": 5
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 13,
+   "split": "train",
+   "state": 2,
+   "windows": 114,
+   "sorties": 3
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 13,
+   "split": "val",
+   "state": 0,
+   "windows": 18,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 13,
+   "split": "val",
+   "state": 1,
+   "windows": 182,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 13,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 13,
+   "split": "test",
+   "state": 0,
+   "windows": 16,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 13,
+   "split": "test",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B1",
+   "drone": 13,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 21,
+   "split": "train",
+   "state": 0,
+   "windows": 130,
+   "sorties": 6
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 21,
+   "split": "train",
+   "state": 1,
+   "windows": 774,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 21,
+   "split": "train",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 21,
+   "split": "val",
+   "state": 0,
+   "windows": 22,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 21,
+   "split": "val",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 21,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 21,
+   "split": "test",
+   "state": 0,
+   "windows": 26,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 21,
+   "split": "test",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 21,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 22,
+   "split": "train",
+   "state": 0,
+   "windows": 327,
+   "sorties": 14
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 22,
+   "split": "train",
+   "state": 1,
+   "windows": 87,
+   "sorties": 4
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 22,
+   "split": "train",
+   "state": 2,
+   "windows": 131,
+   "sorties": 3
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 22,
+   "split": "val",
+   "state": 0,
+   "windows": 65,
+   "sorties": 3
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 22,
+   "split": "val",
+   "state": 1,
+   "windows": 208,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 22,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 22,
+   "split": "test",
+   "state": 0,
+   "windows": 158,
+   "sorties": 4
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 22,
+   "split": "test",
+   "state": 1,
+   "windows": 25,
+   "sorties": 2
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 22,
+   "split": "test",
+   "state": 2,
+   "windows": 85,
+   "sorties": 2
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 23,
+   "split": "train",
+   "state": 0,
+   "windows": 125,
+   "sorties": 6
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 23,
+   "split": "train",
+   "state": 1,
+   "windows": 302,
+   "sorties": 3
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 23,
+   "split": "train",
+   "state": 2,
+   "windows": 52,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 23,
+   "split": "val",
+   "state": 0,
+   "windows": 38,
+   "sorties": 3
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 23,
+   "split": "val",
+   "state": 1,
+   "windows": 201,
+   "sorties": 2
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 23,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 23,
+   "split": "test",
+   "state": 0,
+   "windows": 46,
+   "sorties": 2
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 23,
+   "split": "test",
+   "state": 1,
+   "windows": 323,
+   "sorties": 2
+  },
+  {
+   "net": "B",
+   "site": "B2",
+   "drone": 23,
+   "split": "test",
+   "state": 2,
+   "windows": 65,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 31,
+   "split": "train",
+   "state": 0,
+   "windows": 165,
+   "sorties": 8
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 31,
+   "split": "train",
+   "state": 1,
+   "windows": 669,
+   "sorties": 4
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 31,
+   "split": "train",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 31,
+   "split": "val",
+   "state": 0,
+   "windows": 45,
+   "sorties": 2
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 31,
+   "split": "val",
+   "state": 1,
+   "windows": 46,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 31,
+   "split": "val",
+   "state": 2,
+   "windows": 47,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 31,
+   "split": "test",
+   "state": 0,
+   "windows": 15,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 31,
+   "split": "test",
+   "state": 1,
+   "windows": 226,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 31,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 32,
+   "split": "train",
+   "state": 0,
+   "windows": 335,
+   "sorties": 15
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 32,
+   "split": "train",
+   "state": 1,
+   "windows": 434,
+   "sorties": 3
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 32,
+   "split": "train",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 32,
+   "split": "val",
+   "state": 0,
+   "windows": 95,
+   "sorties": 4
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 32,
+   "split": "val",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 32,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 32,
+   "split": "test",
+   "state": 0,
+   "windows": 45,
+   "sorties": 3
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 32,
+   "split": "test",
+   "state": 1,
+   "windows": 128,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 32,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 33,
+   "split": "train",
+   "state": 0,
+   "windows": 256,
+   "sorties": 12
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 33,
+   "split": "train",
+   "state": 1,
+   "windows": 495,
+   "sorties": 6
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 33,
+   "split": "train",
+   "state": 2,
+   "windows": 143,
+   "sorties": 3
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 33,
+   "split": "val",
+   "state": 0,
+   "windows": 54,
+   "sorties": 3
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 33,
+   "split": "val",
+   "state": 1,
+   "windows": 46,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 33,
+   "split": "val",
+   "state": 2,
+   "windows": 71,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 33,
+   "split": "test",
+   "state": 0,
+   "windows": 63,
+   "sorties": 2
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 33,
+   "split": "test",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B3",
+   "drone": 33,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 41,
+   "split": "train",
+   "state": 0,
+   "windows": 426,
+   "sorties": 23
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 41,
+   "split": "train",
+   "state": 1,
+   "windows": 116,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 41,
+   "split": "train",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 41,
+   "split": "val",
+   "state": 0,
+   "windows": 79,
+   "sorties": 4
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 41,
+   "split": "val",
+   "state": 1,
+   "windows": 45,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 41,
+   "split": "val",
+   "state": 2,
+   "windows": 70,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 41,
+   "split": "test",
+   "state": 0,
+   "windows": 87,
+   "sorties": 5
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 41,
+   "split": "test",
+   "state": 1,
+   "windows": 46,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 41,
+   "split": "test",
+   "state": 2,
+   "windows": 43,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 42,
+   "split": "train",
+   "state": 0,
+   "windows": 488,
+   "sorties": 25
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 42,
+   "split": "train",
+   "state": 1,
+   "windows": 169,
+   "sorties": 1
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 42,
+   "split": "train",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 42,
+   "split": "val",
+   "state": 0,
+   "windows": 95,
+   "sorties": 5
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 42,
+   "split": "val",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 42,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 42,
+   "split": "test",
+   "state": 0,
+   "windows": 83,
+   "sorties": 5
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 42,
+   "split": "test",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 42,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 43,
+   "split": "train",
+   "state": 0,
+   "windows": 484,
+   "sorties": 27
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 43,
+   "split": "train",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 43,
+   "split": "train",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 43,
+   "split": "val",
+   "state": 0,
+   "windows": 102,
+   "sorties": 6
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 43,
+   "split": "val",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 43,
+   "split": "val",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 43,
+   "split": "test",
+   "state": 0,
+   "windows": 117,
+   "sorties": 6
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 43,
+   "split": "test",
+   "state": 1,
+   "windows": 0,
+   "sorties": 0
+  },
+  {
+   "net": "B",
+   "site": "B4",
+   "drone": 43,
+   "split": "test",
+   "state": 2,
+   "windows": 0,
+   "sorties": 0
+  }
+ ],
+ "summary": {
+  "A": {
+   "windows": [
+    [
+     2234,
+     5097,
+     1036
+    ],
+    [
+     383,
+     1241,
+     109
+    ],
+    [
+     460,
+     1165,
+     64
+    ]
+   ],
+   "sorties": [
+    [
+     99,
+     71,
+     20
+    ],
+    [
+     20,
+     17,
+     2
+    ],
+    [
+     20,
+     12,
+     1
+    ]
+   ],
+   "transition_windows": 471,
+   "kept_windows": 11789,
+   "sorties_any": [
+    119,
+    25,
+    23
+   ]
+  },
+  "B": {
+   "windows": [
+    [
+     3374,
+     4320,
+     518
+    ],
+    [
+     735,
+     1186,
+     252
+    ],
+    [
+     701,
+     1017,
+     193
+    ]
+   ],
+   "sorties": [
+    [
+     164,
+     35,
+     12
+    ],
+    [
+     38,
+     10,
+     4
+    ],
+    [
+     32,
+     8,
+     4
+    ]
+   ],
+   "transition_windows": 370,
+   "kept_windows": 12296,
+   "sorties_any": [
+    165,
+    38,
+    32
+   ]
+  }
+ },
+ "states": [
+  "Ground",
+  "Autonomous flight",
+  "Tele-operation"
+ ]
+}

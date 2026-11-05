@@ -68,14 +68,17 @@ def cut_at_idle(mission, q):
     return min(i, len(mission))
 
 
-def load_network(proc_dir, net, T=T_DEF, stride=STRIDE, transform=None, cache=True, label_map=None):
+def load_network(proc_dir, net, T=T_DEF, stride=STRIDE, transform=None, cache=True, label_map=None, purity_min=PURITY):
     """Returns (bins tensor over all drones of the net, clients dict, views dict).
-    transform(ts, ln, up) -> (ts, ln, up) applies a packet-level defence before every view is built."""
+    transform(ts, ln, up) -> (ts, ln, up) applies a packet-level defence before every view is built.
+    purity_min < PURITY also keeps the transition windows (their purity is stored per window in
+    clients[site]["pur"], the label of the last bin in clients[site]["ylast"]) for streaming analyses."""
     files = sorted(glob.glob(os.path.join(proc_dir, "*.npz")))
     files = [f for f in files if not f.endswith("_pk.npz")]
     tname = getattr(transform, "__name__", "none") if transform is not None else "none"
     key = hashlib.md5(("|".join(os.path.basename(f) + str(os.path.getmtime(f)) for f in files) +
-                       "%s_%d_%d_%s_%d_%s" % (net, T, stride, tname, NPK, "" if label_map is None else "".join(map(str, label_map)))).encode()).hexdigest()[:10]
+                       "%s_%d_%d_%s_%d_%s" % (net, T, stride, tname, NPK, "" if label_map is None else "".join(map(str, label_map))) +
+                       ("" if purity_min == PURITY else "_p%.2f" % purity_min)).encode()).hexdigest()[:10]
     cdir = os.path.join(os.path.dirname(proc_dir.rstrip("/\\")), "cache"); os.makedirs(cdir, exist_ok=True)
     cfile = os.path.join(cdir, "%s_T%d_%s_%s.npz" % (net, T, tname, key))
     Xs, clients, offset = [], {}, 0
@@ -111,13 +114,15 @@ def load_network(proc_dir, net, T=T_DEF, stride=STRIDE, transform=None, cache=Tr
         pur = cnt.max(1) / T
         wmi = mi[starts + T // 2]
         same = mi[starts] == mi[ends - 1]
-        ok = (pur >= PURITY) & (cnt.sum(1) == T) & same & (wmi > 0)
+        ok = (pur >= purity_min) & (cnt.sum(1) == T) & same & (wmi > 0)
+        ylast = y[ends - 1]
         h = ((sysid * 1_000_003 + wmi) * 2_654_435_761) % 100
         split = np.where(h < 70, 0, np.where(h < 85, 1, 2))
-        d = clients.setdefault(site, {"start": [], "y": [], "split": [], "drone": [], "mission": [], "row": []})
+        d = clients.setdefault(site, {"start": [], "y": [], "split": [], "drone": [], "mission": [], "row": [], "pur": [], "ylast": []})
         st_ok = starts[ok]
         d["start"].append(st_ok + offset); d["y"].append(lab[ok]); d["split"].append(split[ok])
         d["drone"].append(np.full(int(ok.sum()), sysid)); d["mission"].append(wmi[ok])
+        d["pur"].append(pur[ok].astype(np.float32)); d["ylast"].append(ylast[ok])
         row0 = sum(len(p) for p in PK)
         d["row"].append(np.arange(row0, row0 + len(st_ok)))
         key_f = "%s_%d" % (site, sysid)

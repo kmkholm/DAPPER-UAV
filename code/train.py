@@ -10,6 +10,15 @@ methods: local | central | fedavg | fedprox | fedbn | dapper | dapper_cal | dapp
   dapper_softmax  same recipe with plain softmax attention instead of the differential map
   fedavg/fedprox/fedbn/local/central share the differential-attention encoder
 Option --holdout SITE evaluates a left-out site (zero-shot, then after local calibration).
+
+Revision 1 split protocols (--split):
+  fixed   the original hashed (drone, mission) 70/15/15 split
+  cv5     sortie-grouped 5-fold cross-validation: every sortie is tested exactly once; fold k tests
+          fold k, validates on fold k+1 and trains on the other three (stratified by sortie type)
+  lodo    leave-one-drone-out: --fold k tests drone k of every site (an unseen airframe per site)
+  lomt    leave-one-mission-type-out: --mtype survey tests every survey sortie, trains on the rest
+--all_windows also keeps the transition windows (majority phase < 70 %) of the test sorties; they are
+never used for training or model selection and are scored separately.
 """
 import argparse, copy, json, math, os, sys, time
 import numpy as np
@@ -17,7 +26,7 @@ import torch
 import torch.nn.functional as F
 from sklearn.metrics import f1_score, balanced_accuracy_score, confusion_matrix
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from data import load_network, WindowStore, stats
+from data import load_network, WindowStore, stats, PURITY
 from model import DAPPER, personal_keys
 from defenses import DEFENSES
 from phases import COPTER_CLASSES, PLANE_CLASSES
@@ -42,12 +51,18 @@ ap.add_argument("--task", default="", help="fine (kinematic phases) | op4 (groun
 ap.add_argument("--tag", default="", help="extra suffix for the result file name")
 ap.add_argument("--dropout", type=float, default=0.2)
 ap.add_argument("--tok_drop", type=float, default=0.15)
+ap.add_argument("--split", default="fixed", help="fixed | cv5 | lodo | lomt (revision 1)")
+ap.add_argument("--fold", type=int, default=0)
+ap.add_argument("--mtype", default="", help="mission type held out under --split lomt")
+ap.add_argument("--all_windows", action="store_true", help="also score the transition windows of the test sorties")
 ap.add_argument("--defense", default="none", help="packet-level traffic-shaping defence: pad256 | pad512 | jitter200 | const")
 A = ap.parse_args()
 A.task = A.task or ("op4" if A.coarse else "fine")
 A.coarse = A.task != "fine"
 if A.defense != "none":
     A.tag += "_def" + A.defense
+if A.split != "fixed":
+    A.tag += "_" + A.split + (A.mtype if A.split == "lomt" else str(A.fold))
 
 torch.manual_seed(A.seed); np.random.seed(A.seed)
 DEV = "cuda" if torch.cuda.is_available() else "cpu"
@@ -58,7 +73,54 @@ COARSE_MAP = np.array(TASK_MAP[A.task][A.net]) if A.coarse else None
 PUBLIC_CLASSES = {"P": ["Steady", "Moving"], "Q": ["Pitch down", "Pitch up", "Roll left", "Roll right", "Throttle up", "Yaw left", "Yaw right"]}
 CLASSES = TASK_CLASSES[A.task] if A.coarse else PUBLIC_CLASSES.get(A.net, COPTER_CLASSES if A.net == "A" else PLANE_CLASSES)
 NC = len(CLASSES)
-X, clients, VIEWS = load_network(A.proc, A.net, T=A.T, transform=DEFENSES.get(A.defense), label_map=COARSE_MAP if A.coarse else None)
+X, clients, VIEWS = load_network(A.proc, A.net, T=A.T, transform=DEFENSES.get(A.defense), label_map=COARSE_MAP if A.coarse else None,
+                                 purity_min=0.0 if A.all_windows else PURITY)
+
+
+def _h(sysid, mission):
+    return ((int(sysid) * 1_000_003 + int(mission)) * 2_654_435_761) % (2 ** 32)
+
+
+def assign_splits():
+    """Re-assign train (0) / validation (1) / test (2) per sortie (drone, mission) for the revision protocols.
+    Transition windows (purity < 0.7, present only with --all_windows) get split -1 for training and
+    validation; split_all keeps the sortie split so that they can be scored on the test sorties."""
+    tele = [i for i, c in enumerate(CLASSES) if c.lower().startswith("tele")]
+    sorties = {}
+    for site, d in clients.items():
+        pure = d["pur"] >= PURITY
+        for dr, mi in set(zip(d["drone"].tolist(), d["mission"].tolist())):
+            m = (d["drone"] == dr) & (d["mission"] == mi) & pure
+            ys = d["y"][m]
+            cat = 2 if np.isin(ys, tele).any() else (1 if (ys > 0).any() else 0)
+            sorties[(dr, mi)] = (site, cat)
+    split_of = {}
+    if A.split == "cv5":
+        for cat in (0, 1, 2):
+            ks = sorted([k for k, v in sorties.items() if v[1] == cat], key=lambda k: (sorties[k][0], _h(*k)))
+            for r, k in enumerate(ks):
+                f = r % 5
+                split_of[k] = 2 if f == A.fold % 5 else (1 if f == (A.fold + 1) % 5 else 0)
+    elif A.split in ("lodo", "lomt"):
+        mt = json.load(open(os.path.join(A.proc, "mission_types.json"))) if A.split == "lomt" else {}
+        for k in sorties:
+            dr, mi = k
+            test = (dr % 10 == A.fold) if A.split == "lodo" else (mt.get("%s_%d_%d" % (A.net, dr, mi), "") == A.mtype)
+            split_of[k] = 2 if test else (1 if _h(*k) % 100 >= 85 else 0)
+    for site, d in clients.items():
+        sp = d["split"].copy()
+        if split_of:
+            sp = np.array([split_of[(dr, mi)] for dr, mi in zip(d["drone"].tolist(), d["mission"].tolist())], dtype=np.int64)
+        d["split_all"] = sp.copy()
+        d["split"] = np.where(d["pur"] >= PURITY, sp, -1)
+    n = {}
+    for site in clients:
+        v = np.array([split_of.get(k, -9) for k, sv in sorties.items() if sv[0] == site]) if split_of else np.zeros(0)
+        n[site] = [int((v == k).sum()) for k in (0, 1, 2)]
+    return n
+
+
+SORTIES_PER_SPLIT = assign_splits()
 TAG = A.net + TASK_TAG[A.task]
 STORE = WindowStore(X, VIEWS, T=A.T, device=DEV)
 F_IN = X.shape[1]
@@ -147,8 +209,12 @@ def local_steps(model, site, steps, wclass, rng, proximal=None, lr=None):
 
 
 @torch.no_grad()
-def evaluate(model, site, split=2):
-    st, y = split_idx(site, split)
+def evaluate(model, site, split=2, all_windows=False):
+    if all_windows:
+        d = clients[site]; m = d["split_all"] == split
+        st, y = d["row"][m], d["y"][m]
+    else:
+        st, y = split_idx(site, split)
     if len(st) == 0:
         return None
     model.eval()
@@ -161,6 +227,7 @@ def evaluate(model, site, split=2):
     yp = np.concatenate(preds); pr = np.concatenate(probs)
     return dict(y=y, yp=yp, prob=pr,
                 f1=float(f1_score(y, yp, average="macro", labels=range(NC), zero_division=0)),
+                f1p=float(f1_score(y, yp, average="macro", labels=np.unique(y), zero_division=0)),
                 bacc=float(balanced_accuracy_score(y, yp)),
                 acc=float((y == yp).mean()))
 
@@ -202,14 +269,14 @@ def run_federated():
         new = avg_state(states, keep_local)
         global_model.load_state_dict(new)
         if (r + 1) % 5 == 0 or r == A.rounds - 1:
-            mf = []
+            mf, mfp = [], []
             for s in TRAIN_SITES:
                 site_models[s].load_state_dict({k: v for k, v in global_model.state_dict().items()
                                                 if k not in keep_local}, strict=False)
                 e = evaluate(site_models[s], s, split=1)
                 if e:
-                    mf.append(e["f1"])
-            hist.append(dict(round=r + 1, val_macro_f1=float(np.mean(mf))))
+                    mf.append(e["f1"]); mfp.append(e["f1p"])
+            hist.append(dict(round=r + 1, val_macro_f1=float(np.mean(mf)), val_macro_f1_present=float(np.mean(mfp))))
             print("round %2d  val macroF1 %.4f" % (r + 1, np.mean(mf)), flush=True)
     return global_model, site_models, keep_local, hist
 
@@ -256,7 +323,11 @@ def onboard(global_model, keep_local, site, shots, rng):
     """Few-shot onboarding of a left-out site: freeze the shared backbone, fit only the
     site-personal parameters (calibration + prompts) on `shots` labelled windows."""
     m = make_model()
+    fresh = m.prompt.detach().clone() if m.prompt is not None else None
     m.load_state_dict(global_model.state_dict())
+    if fresh is not None:                   # prompts stay at their sites: a new site starts from a fresh initialisation
+        with torch.no_grad():
+            m.prompt.copy_(fresh)
     init_calibration(m, site)
     local_keys = set(personal_keys(m, SCHEME)) if SCHEME != "none" else set()
     if not local_keys:                       # methods without personal params: adapt the head only
@@ -289,18 +360,33 @@ def main():
 
     per_site = {}
     agg = {"y": [], "yp": [], "prob": []}
+    meta = {"site": [], "drone": [], "mission": [], "start": [], "pur": [], "ylast": []}
+    allw = {"y": [], "yp": [], "prob": [], "site": [], "drone": [], "mission": [], "start": [], "pur": [], "ylast": []}
     for s in TRAIN_SITES:
         e = evaluate(site_models[s], s, split=2)
         if not e:
             continue
-        per_site[s] = dict(f1=e["f1"], bacc=e["bacc"], acc=e["acc"], n=int(len(e["y"])))
+        per_site[s] = dict(f1=e["f1"], f1p=e["f1p"], bacc=e["bacc"], acc=e["acc"], n=int(len(e["y"])),
+                           classes_present=np.unique(e["y"]).tolist())
         for k in agg:
             agg[k].append(e[k])
+        d = clients[s]; m = d["split"] == 2
+        meta["site"].append(np.full(int(m.sum()), s)); meta["drone"].append(d["drone"][m]); meta["mission"].append(d["mission"][m])
+        meta["start"].append(d["start"][m]); meta["pur"].append(d["pur"][m]); meta["ylast"].append(d["ylast"][m])
+        if A.all_windows:
+            ea = evaluate(site_models[s], s, split=2, all_windows=True)
+            ma = d["split_all"] == 2
+            for k in ("y", "yp", "prob"):
+                allw[k].append(ea[k])
+            allw["site"].append(np.full(int(ma.sum()), s)); allw["drone"].append(d["drone"][ma]); allw["mission"].append(d["mission"][ma])
+            allw["start"].append(d["start"][ma]); allw["pur"].append(d["pur"][ma]); allw["ylast"].append(d["ylast"][ma])
     y = np.concatenate(agg["y"]); yp = np.concatenate(agg["yp"]); prob = np.concatenate(agg["prob"])
     tr = [evaluate(site_models[s], s, split=0) for s in TRAIN_SITES]
     overall = dict(macro_f1=float(f1_score(y, yp, average="macro", labels=range(NC), zero_division=0)),
                    bacc=float(balanced_accuracy_score(y, yp)), acc=float((y == yp).mean()),
                    site_mean_f1=float(np.mean([v["f1"] for v in per_site.values()])),
+                   site_mean_f1_present=float(np.mean([v["f1p"] for v in per_site.values()])),
+                   site_mean_bacc=float(np.mean([v["bacc"] for v in per_site.values()])),
                    train_f1=float(np.mean([e["f1"] for e in tr if e])))
     cm = confusion_matrix(y, yp, labels=range(NC)).tolist()
 
@@ -319,10 +405,15 @@ def main():
                rounds=A.rounds, steps=A.steps, T=A.T, n_feat=F_IN, train_sites=TRAIN_SITES,
                overall=overall, per_site=per_site, confusion=cm, history=hist, onboard=onb,
                defense=A.defense, overhead=float(VIEWS.get("overhead", 0.0)),
+               split=A.split, fold=A.fold, mtype=A.mtype, sorties_per_split=SORTIES_PER_SPLIT,
                minutes=round((time.time() - t0) / 60, 2))
     json.dump(res, open(os.path.join(A.out, name + ".json"), "w"), indent=1)
     if A.save_preds:
-        np.savez_compressed(os.path.join(A.out, name + "_pred.npz"), y=y, yp=yp, prob=prob.astype(np.float16))
+        extra = {k: np.concatenate(v) for k, v in meta.items()}
+        if A.all_windows and allw["y"]:
+            extra.update({"all_" + k: np.concatenate(v) for k, v in allw.items()})
+            extra["all_prob"] = extra["all_prob"].astype(np.float16)
+        np.savez_compressed(os.path.join(A.out, name + "_pred.npz"), y=y, yp=yp, prob=prob.astype(np.float16), **extra)
     if A.save_model:
         md = os.path.join(A.out, "..", "models"); os.makedirs(md, exist_ok=True)
         torch.save(dict(cfg=dict(n_feat=F_IN, n_cls=NC, T=A.T, n_prompt=NP_, diff=DIFF, gate=GATE, views=VIEWS_),
