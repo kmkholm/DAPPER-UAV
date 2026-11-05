@@ -44,6 +44,18 @@ cd ../figures && python results_figs.py && python repr_figs.py xai
 
 Tasks: `op3` operational state (ground / autonomous flight / tele-operation), `op4` operational phases, `fine` kinematic phases. Methods: `local, central, fedavg, fedprox, fedbn, dapper` and the ablations `dapper_softmax, dapper_nogate, dapper_cal, dapper_prompt, dapper_nost, dapper_nobins, dapper_pk`. Defences: `--defense pad256 | pad512 | jitter200 | const`.
 
+## Sortie-grouped cross-validation and control experiments
+
+Every sortie (one drone mission) is the independent unit; `--split cv5 --fold k` tests fold k of a sortie-grouped 5-fold cross-validation, `--split lodo --fold k` leaves drone k of every site out, `--split lomt --mtype survey` leaves one mission type out. `--all_windows` also scores the transition windows of the test sorties. `--defense nocomp` removes the Remote-ID reports and the post-landing log upload from the packet stream, `--defense nocomp_human` additionally randomises the command cadence.
+
+```
+cd code
+python rev1_counts.py        # sorties and windows per site, state and split
+python rev1_latency.py       # delay added by random delay and constant-rate shaping (from the packet traces)
+python rev1_queue.py         # 96 runs: CV of all protocols, companion-traffic controls, unseen drones / mission types, new-site reading
+python rev1_analyze.py       # pooled out-of-fold scores, sortie bootstrap CIs, uninformed references, detection delays
+```
+
 ## Regenerating the dataset
 
 Requires GNS3 2.2 with the GNS3 VM (Docker).
